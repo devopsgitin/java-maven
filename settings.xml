@@ -3,7 +3,7 @@
         <mirror>
             <id>nexus</id>
             <mirrorOf>*</mirrorOf>
-            <url>http://127.0.0.1:1081/repository/maven-393-proxy</url>
+            <url>http://172.17.0.3:1081/repository/maven-393-proxy</url>
         </mirror>
     </mirrors>
 </settings>
