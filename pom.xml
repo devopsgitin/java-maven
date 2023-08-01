@@ -26,4 +26,18 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://172.17.0.3:8081/repository/maven-393-snapshot/</url>
+		</snapshotRepository>
+
+		<repository>
+			<id>nexus</id>
+			<url>http://172.17.0.3:8081/repository/maven-393-release/</url>
+		</repository>
+
+	</distributionManagement>
+
 </project>
