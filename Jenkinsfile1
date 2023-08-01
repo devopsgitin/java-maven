@@ -1,0 +1,23 @@
+pipeline{
+    agent none
+    stages{
+        stage("AGENT"){
+            agent{
+                label 'node1'
+            }
+            steps{
+                sh "ls -l"
+                sh "pwd"
+            }
+        }
+        stage("MASTER"){
+            agent{
+                label 'master'
+            }
+            steps{
+                sh "ls -l"
+                sh "pwd"
+            }
+        }
+    }
+}
