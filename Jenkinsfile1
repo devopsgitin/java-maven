@@ -6,20 +6,16 @@ pipeline{
                 label 'node1'
             }
             steps{
-                sh "ls -l"
-                sh "pwd"
+                sh "mvn deploy"
             }
         }
-        stage("MASTER"){
+        stage("Pull Artifacts and Build Image"){
             agent{
                 label 'master'
             }
             steps{
-               sh "pwd"
-               sh "ls -l"
                sh "wget --user=admin --password=nexus http://127.0.0.1:1081/repository/maven-393-release/com/demo/demoapp/1.0.0-RELEASE/demoapp-1.0.0-RELEASE.war"
-               sh "ls -l"
-               sh "pwd"
+               sh "docker build -t myapp:v1 ."
             }
         }
     }
