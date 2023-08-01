@@ -12,7 +12,7 @@ pipeline{
                 sh "mvn deploy"
             }
         }
-        stage("Pull Artifacts and Build Image"){
+        stage("Pull Artifacts  and Build Image"){
             agent{
                 label 'master'
             }
