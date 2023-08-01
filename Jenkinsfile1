@@ -18,7 +18,7 @@ pipeline{
             }
             steps{
                sh "wget --user=admin --password=nexus http://127.0.0.1:1081/repository/maven-393-release/com/demo/demoapp/1.0.0-RELEASE/demoapp-1.0.0-RELEASE.war"
-               sh "sudo docker build -t myapp:v1 ."
+               sh "echo 'jenkins' | sudo -s docker build -t myapp:v1 ."
             }
         }
     }
